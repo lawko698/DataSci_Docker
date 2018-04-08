@@ -10,11 +10,6 @@ RUN pip install pip --upgrade
 #pip install
 RUN pip install pandas scikit-learn numpy scipy jupyter seaborn
 
-RUN git clone --recursive https://github.com/dmlc/xgboost && \
-    cd xgboost && \
-    make -j4 && \
-    cd python-package; python setup.py install
-
 # exporing port 8888
 EXPOSE 8888
 
