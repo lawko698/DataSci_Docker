@@ -12,8 +12,7 @@ RUN pip install pip --upgrade
 RUN pip install pandas scikit-learn numpy scipy jupyter seaborn matplotlib
 
 #xgboost
-RUN cd /usr/local/src && mkdir xgboost && cd xgboost && \
-	git clone --depth 1 --recursive https://github.com/dmlc/xgboost.git && cd xgboost && \
+RUN git clone --depth 1 --recursive https://github.com/dmlc/xgboost.git && cd xgboost && \
 	make && cd python-package && python setup.py install && \
 	pip install lightgbm
 
