@@ -1,4 +1,4 @@
-FROM lawko698/DataSciDocker
+FROM lawko698/Docker
 
 #pip install
 RUN pip install pandas scikit-learn numpy scipy jupyter seaborn
