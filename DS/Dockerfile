@@ -6,10 +6,10 @@ RUN pip install pandas scikit-learn numpy scipy jupyter seaborn
 # exporing port 8888
 EXPOSE 8888
 
-#RUN mkdir /notebooks
-#WORKDIR /notebooks
+RUN mkdir /notebook/
+WORKDIR /notebook/
 #Share folder to host computer
-#VOLUME /notebooks
+VOLUME /notebook
 
 # Running jupyter notebook
 # --NotebookApp.token='mynotebook' is the password
