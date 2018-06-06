@@ -1,4 +1,4 @@
-FROM lawko698/Docker/base
+FROM lawko698/docker/base
 
 ENV PYTHONUNBUFFERED 1
 ENV DJANGO_ENV dev
