@@ -1,4 +1,4 @@
-FROM lawko698/Docker
+FROM lawko698/docker
 
 #pip install
 RUN pip install pandas scikit-learn numpy scipy jupyter seaborn
