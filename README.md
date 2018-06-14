@@ -1,1 +1,1 @@
-# Dockerfile_datasci
+# Dockerfile for data science jupyter notebook and Django deployment
