@@ -1,8 +1,15 @@
 #base image
-FROM ubuntu:latest
+FROM python:3.6
 
 # updating respoitory
-RUN apt-get update && apt-get -y upgrade
-RUN apt-get install -y build-essential python-dev
-RUN apt-get install -y python python-distribute python-pip
 RUN pip install pip --upgrade
+# install packages
+RUN pip install pandas scikit-learn numpy scipy jupyter seaborn lightgbm matplotlib xgboost
+
+RUN mkdir /notebook
+WORKDIR /notebook/
+
+#exposing port 8888
+EXPOSE 8888
+
+CMD ["jupyter", "notebook", "--port=8888", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
